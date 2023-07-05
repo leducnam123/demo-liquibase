@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20230704_create_table_topic
+      author: kyrios
+      changes:
+        - createTable:
+            tableName: topics
+            columns:
+              - column:
+                  name: topic_id
+                  type: varchar(10)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: topic_name
+                  type: varchar(30)
+              - column:
+                  name: price
+                  type: bigint
+              - column:
+                  name: practice_place
+                  type: varchar(30)
+

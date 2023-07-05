@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                 https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="20230704_create_table_course" author="kyrios">
+        <createTable tableName="courses">
+            <column name="course_id" type="varchar(10)">
+                <constraints primaryKey="true" unique="true"/>
+            </column>
+            <column name="course_name" type="varchar(30)"/>
+            <column name="phone" type="varchar(10)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

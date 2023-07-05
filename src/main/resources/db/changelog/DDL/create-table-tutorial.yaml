@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20230704
+      author: kyrios
+      changes:
+        - createTable:
+            tableName: tutorials
+            columns:
+              - column:
+                  name: student_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: topic_id
+                  type: varchar(10)
+                  constraints:
+                    foreignKeyName: fk_tutorial_topic
+                    references: topics(topic_id)
+              - column:
+                  name: teacher_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_tutorial_teacher
+                    references: teachers(teacher_id)
+              - column:
+                  name: result
+                  type: decimal(5,2)
+
